@@ -1,0 +1,15 @@
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.AccesoDatos\bin\Debug\net8.0\SistemaHotelAloha.AccesoDatos.deps.json
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.AccesoDatos\bin\Debug\net8.0\SistemaHotelAloha.AccesoDatos.dll
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.AccesoDatos\bin\Debug\net8.0\SistemaHotelAloha.AccesoDatos.pdb
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.AccesoDatos\bin\Debug\net8.0\SistemaHotelAloha.Dominio.dll
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.AccesoDatos\bin\Debug\net8.0\SistemaHotelAloha.Dominio.pdb
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.AccesoDatos\obj\Debug\net8.0\SistemaHotelAloha.AccesoDatos.csproj.AssemblyReference.cache
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.AccesoDatos\obj\Debug\net8.0\SistemaHotelAloha.AccesoDatos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.AccesoDatos\obj\Debug\net8.0\SistemaHotelAloha.AccesoDatos.AssemblyInfoInputs.cache
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.AccesoDatos\obj\Debug\net8.0\SistemaHotelAloha.AccesoDatos.AssemblyInfo.cs
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.AccesoDatos\obj\Debug\net8.0\SistemaHotelAloha.AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.AccesoDatos\obj\Debug\net8.0\SistemaH.EF38B6B8.Up2Date
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.AccesoDatos\obj\Debug\net8.0\SistemaHotelAloha.AccesoDatos.dll
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.AccesoDatos\obj\Debug\net8.0\refint\SistemaHotelAloha.AccesoDatos.dll
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.AccesoDatos\obj\Debug\net8.0\SistemaHotelAloha.AccesoDatos.pdb
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.AccesoDatos\obj\Debug\net8.0\ref\SistemaHotelAloha.AccesoDatos.dll

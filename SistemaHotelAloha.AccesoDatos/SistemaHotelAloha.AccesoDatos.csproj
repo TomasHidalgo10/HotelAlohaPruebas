@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaHotelAloha.Dominio\SistemaHotelAloha.Dominio.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.10" />
+  
+    <PackageReference Include="MySql.Data" Version="9.5.0" />
+
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.0" />
+
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.0" />
+
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="9.0.0" />
+
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0" />
+	
+	<PackageReference Include="MySqlConnector" Version="2.4.0" />
+  
+</ItemGroup>
+
+
+  <ItemGroup>
+    <Compile Remove="Disabled_EF\**\*.cs" />
+    <None Include="Disabled_EF\**\*.cs" />
+  </ItemGroup>
+</Project>
