@@ -1,0 +1,17 @@
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.Servicios\bin\Debug\net8.0\SistemaHotelAloha.Servicios.deps.json
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.Servicios\bin\Debug\net8.0\SistemaHotelAloha.Servicios.dll
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.Servicios\bin\Debug\net8.0\SistemaHotelAloha.Servicios.pdb
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.Servicios\bin\Debug\net8.0\SistemaHotelAloha.AccesoDatos.dll
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.Servicios\bin\Debug\net8.0\SistemaHotelAloha.Dominio.dll
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.Servicios\bin\Debug\net8.0\SistemaHotelAloha.AccesoDatos.pdb
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.Servicios\bin\Debug\net8.0\SistemaHotelAloha.Dominio.pdb
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.Servicios\obj\Debug\net8.0\SistemaHotelAloha.Servicios.csproj.AssemblyReference.cache
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.Servicios\obj\Debug\net8.0\SistemaHotelAloha.Servicios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.Servicios\obj\Debug\net8.0\SistemaHotelAloha.Servicios.AssemblyInfoInputs.cache
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.Servicios\obj\Debug\net8.0\SistemaHotelAloha.Servicios.AssemblyInfo.cs
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.Servicios\obj\Debug\net8.0\SistemaHotelAloha.Servicios.csproj.CoreCompileInputs.cache
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.Servicios\obj\Debug\net8.0\SistemaH.0E5EEAD4.Up2Date
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.Servicios\obj\Debug\net8.0\SistemaHotelAloha.Servicios.dll
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.Servicios\obj\Debug\net8.0\refint\SistemaHotelAloha.Servicios.dll
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.Servicios\obj\Debug\net8.0\SistemaHotelAloha.Servicios.pdb
+C:\Users\nico-\Desktop\Nueva carpeta\SistemaHotelAloha2025-master\SistemaHotelAloha.Servicios\obj\Debug\net8.0\ref\SistemaHotelAloha.Servicios.dll
