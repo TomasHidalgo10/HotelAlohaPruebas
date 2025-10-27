@@ -1,0 +1,64 @@
+@using Microsoft.AspNetCore.Components.Authorization
+@using SistemaHotelAloha.Web.Auth
+@inject AuthenticationStateProvider AuthStateProvider
+@inject CustomAuthStateProvider CustomAuth
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark border-bottom mb-3">
+    <div class="container-fluid">
+        <a class="navbar-brand text-uppercase fw-bold" href="">ALOHA</a>
+
+        <div class="collapse navbar-collapse justify-content-between">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="">Home</NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="nav-link" href="buscar">Buscar</NavLink>
+                </li>
+                <AuthorizeView>
+                    <Authorized>
+                        <li class="nav-item">
+                            <NavLink class="nav-link" href="reservas">Mis reservas</NavLink>
+                        </li>
+                    </Authorized>
+                </AuthorizeView>
+            </ul>
+
+            <ul class="navbar-nav">
+                <AuthorizeView>
+                    <!-- La magia: usamos el CONTEXTO del estado de autenticación, sin hacer await en el markup -->
+                    <Authorized Context="auth">
+                        @{
+                            var user = auth.User;
+                            var name = user.Identity?.Name ?? "Usuario";
+                        }
+                        <li class="nav-item">
+                            <span class="navbar-text me-3">Hola, @name</span>
+                        </li>
+                        <li class="nav-item">
+                            <!-- NO uses async lambda aquí; usá el método directamente -->
+                            <a class="nav-link" href="" @onclick="Logout">Cerrar sesión</a>
+                        </li>
+                    </Authorized>
+                    <NotAuthorized>
+                        <li class="nav-item">
+                            <NavLink class="nav-link" href="login">Login</NavLink>
+                        </li>
+                        <li class="nav-item">
+                            <NavLink class="nav-link" href="register">Registrarse</NavLink>
+                        </li>
+                    </NotAuthorized>
+                </AuthorizeView>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+@code {
+    // Evento para el botón "Cerrar sesión"
+    // Usá la firma simple Task -> y en el markup @onclick="Logout"
+    private async Task Logout()
+    {
+        await CustomAuth.SignOutAsync();
+    }
+}

@@ -1,0 +1,69 @@
+@page "/register"
+@inject SistemaHotelAloha.AccesoDatos.UsuarioAdoRepository Ado
+@inject SistemaHotelAloha.Web.Auth.SimpleAuthStateProvider Auth
+@inject NavigationManager Nav
+
+<h3>Registro</h3>
+
+<EditForm Model="@vm" OnValidSubmit="Submit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <InputText @bind-Value="vm.Nombre" placeholder="Nombre" />
+    <InputText @bind-Value="vm.Apellido" placeholder="Apellido" />
+    <InputText @bind-Value="vm.Email" placeholder="Email" />
+    <InputText @bind-Value="vm.Contrasena" type="password" placeholder="Contraseña" />
+    <InputText @bind-Value="vm.Telefono" placeholder="Teléfono" />
+    <button type="submit">Crear cuenta</button>
+</EditForm>
+
+@code {
+    private Vm vm = new();
+
+    private async Task Submit()
+    {
+        if (Ado.EmailExists(vm.Email.Trim()))
+        {
+            // mostrar error
+            return;
+        }
+
+        var rows = Ado.Create(
+            nombre: vm.Nombre,
+            apellido: vm.Apellido?? "",
+            email: vm.Email.Trim(),
+            contraseña: Hash(vm.Contrasena),
+            telefono: vm.Telefono?? "",
+            fechaRegistro: DateTime.UtcNow,
+            activo: true
+        );
+
+        if (rows <= 0)
+        {
+            // mostrar error
+            return;
+        }
+
+        var id = Ado.Authenticate(vm.Email.Trim(), Hash(vm.Contrasena));
+        var nombre = string.Join(" ", vm.Nombre, vm.Apellido).Trim();
+        await Auth.SignInAsync(id, string.IsNullOrWhiteSpace(nombre) ? vm.Email : nombre);
+
+        Nav.NavigateTo("/", forceLoad: true);
+    }
+
+    private static string Hash(string raw)
+    {
+        using var sha = System.Security.Cryptography.SHA256.Create();
+        var bytes = sha.ComputeHash(System.Text.Encoding.UTF8.GetBytes(raw ?? string.Empty));
+        return string.Concat(bytes.Select(b => b.ToString("x2")));
+    }
+
+    private class Vm
+    {
+        [Required] public string Nombre { get; set; } = "";
+        public string? Apellido { get; set; }
+        [Required, EmailAddress] public string Email { get; set; } = "";
+        [Required] public string Contrasena { get; set; } = "";
+        public string? Telefono { get; set; }
+    }
+}

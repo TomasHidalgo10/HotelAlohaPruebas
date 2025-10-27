@@ -1,0 +1,48 @@
+@using SistemaHotelAloha.Web.Auth
+@page "/login"
+@inject SistemaHotelAloha.AccesoDatos.UsuarioAdoRepository Ado
+@inject SistemaHotelAloha.Web.Auth.SimpleAuthStateProvider Auth
+@inject NavigationManager Nav
+
+<h3>Iniciar sesión</h3>
+
+<EditForm Model="@vm" OnValidSubmit="Submit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <InputText @bind-Value="vm.Email" placeholder="Email" />
+    <InputText @bind-Value="vm.Contrasena" placeholder="Contraseña" type="password" />
+    <button type="submit">Entrar</button>
+</EditForm>
+
+@code {
+    private LoginVm vm = new();
+
+    private async Task Submit()
+    {
+        var id = Ado.Authenticate(vm.Email.Trim(), Hash(vm.Contrasena));
+        if (id <= 0)
+        {
+            // mostrar error en UI
+            return;
+        }
+
+        var nombre = Ado.GetNombreCompletoById(id); // o Ado.GetById(id) y concatenás
+        await Auth.SignInAsync(id, string.IsNullOrWhiteSpace(nombre) ? vm.Email : nombre);
+
+        Nav.NavigateTo("/", forceLoad: true);
+    }
+
+    private static string Hash(string raw)
+    {
+        using var sha = System.Security.Cryptography.SHA256.Create();
+        var bytes = sha.ComputeHash(System.Text.Encoding.UTF8.GetBytes(raw ?? string.Empty));
+        return string.Concat(bytes.Select(b => b.ToString("x2")));
+    }
+
+    private class LoginVm
+    {
+        [Required, EmailAddress] public string Email { get; set; } = "";
+        [Required] public string Contrasena { get; set; } = "";
+    }
+}

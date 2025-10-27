@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "SistemaHotelAloha.Desktop\\SistemaHotelAloha.Desktop.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "SistemaHotelAloha.Web\\SistemaHotelAloha.Web.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
